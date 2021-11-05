@@ -39,11 +39,15 @@ form {
     margin-right: .5rem;
   }
 
-  input[type="number"] {
+  input[type="number"],
+  input[type="text"] {
     margin-left: auto;
+    text-align: right;
+
   }
 
   input[type="number"],
+  input[type="text"],
   select {
     padding: 2px 4px;
   }
@@ -75,7 +79,8 @@ form {
     flex-direction: column;
   }
 
-  .form__colour label + label {
+  .form__colour label + label,
+  .form__map label + label {
     margin-top: .25rem;
   }
 

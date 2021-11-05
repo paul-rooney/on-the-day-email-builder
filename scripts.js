@@ -8,6 +8,8 @@ const colour_primary = form.colourPrimary;
 const colour_secondary = form.colourSecondary;
 const colour_text_primary = form.colourTextPrimary;
 const image_hero = form.imageHero;
+const map_latitude = form.mapLatitude;
+const map_longitude = form.mapLongitude;
 
 const hero = document.querySelector('.hero');
 const hero_small = document.querySelector('.register');
@@ -58,6 +60,33 @@ const updateVML = (element, image) => {
   }
 }
 
+const getCSS = () => {
+  const allCSS = [...document.styleSheets]
+  .map(styleSheet => {
+    try {
+      return [...styleSheet.cssRules]
+      .map(rule => rule.cssText);
+    } catch (e) {
+      console.warn(e);
+    }
+  })
+  .filter(Boolean);
+
+  return allCSS;
+}
+
+const updateMap = (e) => {
+  const latitude = map_latitude.value;
+  const longitude = map_longitude.value;
+  const map = document.querySelector('#map');
+  const src = `https://api.mapbox.com/styles/v1/mapbox/traffic-day-v2/static/pin-s-circle+000306(${longitude},${latitude})/${longitude},${latitude},14,0,60/350x233@2x?access_token=pk.eyJ1IjoiYm1mYnVzaW5lc3NzZXJ2aWNlcyIsImEiOiJjazVxenN2OWIwN2FjM29wMnB2bWdjemJ1In0.g39JtZJcvAQiBtu7_3rpTw&attribution=false&logo=false`;
+
+
+  map.src = src;
+
+  console.log(latitude);
+}
+
 
 
 //
@@ -73,3 +102,9 @@ image_hero.addEventListener('change', (e) => {
   const new_image = updateHeroImages(e);
   updateVML(document.documentElement, new_image);
 });
+
+map_latitude.addEventListener('input', (e) => updateMap(e));
+map_latitude.addEventListener('change', (e) => updateMap(e));
+
+map_longitude.addEventListener('input', (e) => updateMap(e));
+map_longitude.addEventListener('change', (e) => updateMap(e));

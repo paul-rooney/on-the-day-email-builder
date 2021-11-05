@@ -10,7 +10,7 @@
 <link rel="stylesheet" href="./control-panel.css">
 
 <style type="text/css">
-  :root {
+  html {
     --colour--primary: #000306;
     --colour--secondary: #72bf44;
 
@@ -208,7 +208,7 @@
 
 
 
-  .sponsors { font-size: smaller; }
+  .subscription { font-size: smaller; }
 
   .newsletter { color: inherit; font-size: smaller; }
 
@@ -286,6 +286,7 @@
 
 
 
+                <!-- HEADER SECTION -->
                 <table width="640" cellpadding="0" cellspacing="0" border="0" class="wrapper [ header ]" bgcolor="#f9f9f9">
                   <tr>
                     <td align="center" valign="top">
@@ -325,14 +326,14 @@
                     <td height="15" style="font-size:10px; line-height:10px;">&nbsp;</td>
                   </tr>
                 </table>
+                <!-- END HEADER SECTION -->
 
 
 
 
 
                 <!-- HERO SECTION -->
-                <!-- <table width="640" height="240" cellpadding="0" cellspacing="0" border="0" class="wrapper [ hero ]" background="./assets/email-master-bg-640x320.jpg" style="background-image: url(./assets/email-master-bg-640x320.jpg);"> -->
-                <table width="640" height="240" cellpadding="0" cellspacing="0" border="0" class="wrapper [ hero ]" background="./assets/email-master-bg-640x320.jpg" style="background-image: url('https://picsum.photos/640/240');">
+                <table width="640" height="240" cellpadding="0" cellspacing="0" border="0" class="wrapper [ hero ]" background="./assets/email-master-bg-640x320.jpg" style="background-image: url(./assets/email-master-bg-640x320.jpg);">
                   <tr>
                     <td align="center">
                     <!--[if gte mso 9]>
@@ -396,14 +397,14 @@
                             <table width="100%" cellpadding="0" cellspacing="0" border="0">
                               <tr>
                                 <td align="right" valign="top">
-                                  <multiline>
-                                    <address class="address">
-                                      <strong>Hogan Suite</strong><br>
-                                      Croke Park<br>
-                                      Jones’ Rd, Drumcondra<br>
-                                      Dublin 3
-                                    </address>
-                                  </multiline>
+                                  <address class="address">
+                                    <multiline>
+                                        <strong>Hogan Suite</strong><br>
+                                        Croke Park<br>
+                                        Jones’ Rd, Drumcondra<br>
+                                        Dublin 3
+                                    </multiline>
+                                  </address>
                                   <singleline><time class="start-time" datetime="PT7H30M">08:30&ndash;16:00</time></singleline>
                                   <singleline><time class="start-date" datetime="2020-02-05">27th February 2020</time></singleline>
                                 </td>
@@ -416,10 +417,10 @@
                                   <tr>
                                     <td align="center" valign="top">
 
-                                      <table width="198" height="44" cellpadding="0" cellspacing="0" border="0" class="[ button ]" bgcolor="72bf44" style="background-color: var(--colour--secondary); border-radius:4px;">
+                                      <table width="198" height="44" cellpadding="0" cellspacing="0" border="0" class="[ button ]" bgcolor="72bf44" style="background-color: var(--colour--secondary); border-radius: 4px;">
                                         <tr>
-                                          <td align="center" valign="middle" height="44" style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif; font-size:14px; font-weight:normal;">
-                                            <singleline><a href="#" style="font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif;color:inherit;display:inline-block;text-decoration:none;line-height:44px;width:198px;font-weight:normal;">Getting there</a></singleline>
+                                          <td align="center" valign="middle" height="44" style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif; font-size: 14px; font-weight: normal;">
+                                            <singleline><a href="#" style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif; color: inherit; display: inline-block; text-decoration: none; line-height: 44px; width: 198px; font-weight: normal;">Getting there</a></singleline>
                                           </td>
                                         </tr>
                                       </table>
@@ -453,8 +454,9 @@
                             </repeater>
 
                             <!-- Visit: https://account.mapbox.com/ to access to get the API key if required -->
+                            <!-- Visit: https://staticmapmaker.com/mapbox/ to design a new map, if required -->
                             <!-- https://api.mapbox.com/styles/v1/mapbox/traffic-day-v2/static/pin-s-circle+000306(-6.2533976,53.360712)/-6.2533976,53.360712,14,0/350x233@2x?access_token=pk.eyJ1IjoiYm1mYnVzaW5lc3NzZXJ2aWNlcyIsImEiOiJjazVxenN2OWIwN2FjM29wMnB2bWdjemJ1In0.g39JtZJcvAQiBtu7_3rpTw&attribution=false&logo=false -->
-                            <img editable width="350" src="" label="Map: 350✕233" style="margin: 30px 0 0; padding:0; border: none; display: block;" border="0" class="img [ map ]" alt="">
+                            <img id="map" editable width="350" src="https://api.mapbox.com/styles/v1/mapbox/traffic-day-v2/static/pin-s-circle+000306(-6.2533976,53.360712)/-6.2533976,53.360712,14,0,60/350x233@2x?access_token=pk.eyJ1IjoiYm1mYnVzaW5lc3NzZXJ2aWNlcyIsImEiOiJjazVxenN2OWIwN2FjM29wMnB2bWdjemJ1In0.g39JtZJcvAQiBtu7_3rpTw&attribution=false&logo=false" label="Map: 350✕233" style="margin: 30px 0 0; padding:0; border: none; display: block;" border="0" class="img [ map ]" alt="">
                           </td>
                         </tr>
                       </table>
@@ -466,6 +468,7 @@
                     <td height="51" style="font-size:10px; line-height:10px;">&nbsp;</td>
                   </tr>
                 </table>
+                <!-- END MAIN INFO SECTION -->
 
 
 
@@ -552,6 +555,10 @@
                 </table>
                 <!-- END PROGRAMME SECTION -->
 
+
+
+
+
                 <!-- REGISTER SECTION -->
                 <table width="640" height="160" cellpadding="0" cellspacing="0" border="0" class="wrapper [ register ]" background="email-master-bg-640x320.jpg" style="background-image: url('./assets/email-master-bg-640x320.jpg');">
                   <tr>
@@ -634,100 +641,108 @@
                 </table>
                 <!-- END REGISTER SECTION -->
 
-              <!-- SPONSORS SECTION -->
-              <repeater>
-                <layout label="eolas Magazine subscription">
-                  <table width="640" cellpadding="0" cellspacing="0" border="0" class="wrapper [ sponsors ]" bgcolor="#f9f9f9">
-                    <tr>
-                      <td height="30" style="font-size:10px; line-height:10px;">&nbsp;</td>
-                    </tr>
-                    <tr>
-                      <td align="center" valign="top">
 
-                        <table width="580" cellpadding="0" cellspacing="0" border="0" class="container">
-                          <tr>
-                            <td width="420" class="mobile" align="left" valign="middle">
-                              <multiline>
-                                <h3 class="heading">Are you an eolas Magazine subscriber?</h3>
-                                <p>To receive updates on eolas Magazine publications and events, <a href="https://www.eolasmagazine.ie/subscription-confirmation/" target="_blank" style="color: #002B54 !important; text-decoration: underline;">sign up here</a>.</p>
-                              </multiline>
-                            </td>
-                            <td width="60" class="mobile" align="center" valign="middle">&nbsp;</td>
-                            <td width="100" class="mobileOff" align="right" valign="middle">
-                              <img editable src="assets/eolas_master.png" width="100" label="Logo: 100✕66" style="margin: 0; padding: 0; border: none; display: block;" border="0" class="img" alt="">
-                            </td>
-                          </tr>
-                        </table>
 
-                      </td>
-                    </tr>
-                    <tr>
-                      <td height="30" style="font-size:10px; line-height:10px;">&nbsp;</td>
-                    </tr>
-                  </table>
-                </layout>
-                <layout label="agendaNi subscription">
-                  <table width="640" cellpadding="0" cellspacing="0" border="0" class="wrapper [ sponsors ]" bgcolor="#f9f9f9">
-                    <tr>
-                      <td height="30" style="font-size:10px; line-height:10px;">&nbsp;</td>
-                    </tr>
-                    <tr>
-                      <td align="center" valign="top">
 
-                        <table width="580" cellpadding="0" cellspacing="0" border="0" class="container">
-                          <tr>
-                            <td width="420" class="mobile" align="left" valign="middle">
-                              <multiline>
-                                <h3 class="heading">Are you an agendaNi subscriber?</h3>
-                                <p>To receive updates on agendaNi publications and events, <a href="https://www.agendani.com/subscription-confirmation/" target="_blank" style="color: #002B54 !important; text-decoration: underline;">sign up here</a>.</p>
-                              </multiline>
-                            </td>
-                            <td width="60" class="mobile" align="center" valign="middle">&nbsp;</td>
-                            <td width="100" class="mobileOff" align="right" valign="middle">
-                              <img editable src="assets/agendaNi_master.png" width="100" label="Logo: 100✕66" style="margin: 0; padding: 0; border: none; display: block;" border="0" class="img" alt="">
-                            </td>
-                          </tr>
-                        </table>
 
-                      </td>
-                    </tr>
-                    <tr>
-                      <td height="30" style="font-size:10px; line-height:10px;">&nbsp;</td>
-                    </tr>
-                  </table>
-                </layout>
-                <layout label="Energy Ireland subscription">
-                  <table width="640" cellpadding="0" cellspacing="0" border="0" class="wrapper [ sponsors ]" bgcolor="#f9f9f9">
-                    <tr>
-                      <td height="30" style="font-size:10px; line-height:10px;">&nbsp;</td>
-                    </tr>
-                    <tr>
-                      <td align="center" valign="top">
+                <!-- SUBSCRIPTION SECTION -->
+                <repeater>
+                  <layout label="eolas Magazine subscription">
+                    <table width="640" cellpadding="0" cellspacing="0" border="0" class="wrapper [ subscription ]" bgcolor="#f9f9f9">
+                      <tr>
+                        <td height="30" style="font-size:10px; line-height:10px;">&nbsp;</td>
+                      </tr>
+                      <tr>
+                        <td align="center" valign="top">
 
-                        <table width="580" cellpadding="0" cellspacing="0" border="0" class="container">
-                          <tr>
-                            <td width="420" class="mobile" align="left" valign="middle">
-                              <multiline>
-                                <h3 class="heading">Are you an Energy Ireland subscriber?</h3>
-                                <p>To receive updates on Energy Ireland publications and events, <a href="https://www.energyireland.ie/subscribe/" target="_blank" style="color: #002B54 !important; text-decoration: underline;">sign up here</a>.</p>
-                              </multiline>
-                            </td>
-                            <td width="60" class="mobile" align="center" valign="middle">&nbsp;</td>
-                            <td width="100" class="mobileOff" align="right" valign="middle">
-                              <img editable src="assets/energy-ireland_master.png" width="100" label="Logo: 100✕66" style="margin: 0; padding: 0; border: none; display: block;" border="0" class="img" alt="">
-                            </td>
-                          </tr>
-                        </table>
+                          <table width="580" cellpadding="0" cellspacing="0" border="0" class="container">
+                            <tr>
+                              <td width="420" class="mobile" align="left" valign="middle">
+                                <multiline>
+                                  <h3 class="heading">Are you an eolas Magazine subscriber?</h3>
+                                  <p>To receive updates on eolas Magazine publications and events, <a href="https://www.eolasmagazine.ie/subscription-confirmation/" target="_blank" style="color: #002B54 !important; text-decoration: underline;">sign up here</a>.</p>
+                                </multiline>
+                              </td>
+                              <td width="60" class="mobile" align="center" valign="middle">&nbsp;</td>
+                              <td width="100" class="mobileOff" align="right" valign="middle">
+                                <img editable src="assets/eolas_master.png" width="100" label="Logo: 100✕66" style="margin: 0; padding: 0; border: none; display: block;" border="0" class="img" alt="">
+                              </td>
+                            </tr>
+                          </table>
 
-                      </td>
-                    </tr>
-                    <tr>
-                      <td height="30" style="font-size:10px; line-height:10px;">&nbsp;</td>
-                    </tr>
-                  </table>
-                </layout>
-              </repeater>
-              <!-- END SPONSORS SECTION -->
+                        </td>
+                      </tr>
+                      <tr>
+                        <td height="30" style="font-size:10px; line-height:10px;">&nbsp;</td>
+                      </tr>
+                    </table>
+                  </layout>
+                  <layout label="agendaNi subscription">
+                    <table width="640" cellpadding="0" cellspacing="0" border="0" class="wrapper [ subscription ]" bgcolor="#f9f9f9">
+                      <tr>
+                        <td height="30" style="font-size:10px; line-height:10px;">&nbsp;</td>
+                      </tr>
+                      <tr>
+                        <td align="center" valign="top">
+
+                          <table width="580" cellpadding="0" cellspacing="0" border="0" class="container">
+                            <tr>
+                              <td width="420" class="mobile" align="left" valign="middle">
+                                <multiline>
+                                  <h3 class="heading">Are you an agendaNi subscriber?</h3>
+                                  <p>To receive updates on agendaNi publications and events, <a href="https://www.agendani.com/subscription-confirmation/" target="_blank" style="color: #002B54 !important; text-decoration: underline;">sign up here</a>.</p>
+                                </multiline>
+                              </td>
+                              <td width="60" class="mobile" align="center" valign="middle">&nbsp;</td>
+                              <td width="100" class="mobileOff" align="right" valign="middle">
+                                <img editable src="assets/agendaNi_master.png" width="100" label="Logo: 100✕66" style="margin: 0; padding: 0; border: none; display: block;" border="0" class="img" alt="">
+                              </td>
+                            </tr>
+                          </table>
+
+                        </td>
+                      </tr>
+                      <tr>
+                        <td height="30" style="font-size:10px; line-height:10px;">&nbsp;</td>
+                      </tr>
+                    </table>
+                  </layout>
+                  <layout label="Energy Ireland subscription">
+                    <table width="640" cellpadding="0" cellspacing="0" border="0" class="wrapper [ subscription ]" bgcolor="#f9f9f9">
+                      <tr>
+                        <td height="30" style="font-size:10px; line-height:10px;">&nbsp;</td>
+                      </tr>
+                      <tr>
+                        <td align="center" valign="top">
+
+                          <table width="580" cellpadding="0" cellspacing="0" border="0" class="container">
+                            <tr>
+                              <td width="420" class="mobile" align="left" valign="middle">
+                                <multiline>
+                                  <h3 class="heading">Are you an Energy Ireland subscriber?</h3>
+                                  <p>To receive updates on Energy Ireland publications and events, <a href="https://www.energyireland.ie/subscribe/" target="_blank" style="color: #002B54 !important; text-decoration: underline;">sign up here</a>.</p>
+                                </multiline>
+                              </td>
+                              <td width="60" class="mobile" align="center" valign="middle">&nbsp;</td>
+                              <td width="100" class="mobileOff" align="right" valign="middle">
+                                <img editable src="assets/energy-ireland_master.png" width="100" label="Logo: 100✕66" style="margin: 0; padding: 0; border: none; display: block;" border="0" class="img" alt="">
+                              </td>
+                            </tr>
+                          </table>
+
+                        </td>
+                      </tr>
+                      <tr>
+                        <td height="30" style="font-size:10px; line-height:10px;">&nbsp;</td>
+                      </tr>
+                    </table>
+                  </layout>
+                </repeater>
+                <!-- END SPONSORS SECTION -->
+
+
+
+
 
                 <!-- TERMS & CONDITIONS SECTION -->
                 <repeater>
@@ -828,7 +843,7 @@
                     <td align="left" valign="top">
                       <small>
                         You received this e-mail because you are registered to attend one of our conferences.<br>
-                        If you’d like to unsubscribe from future e-mails, <unsubscribe>click here</unsubscribe>.
+                        To unsubscribe from future e-mails, <unsubscribe>click here</unsubscribe>.
                       </small>
                     </td>
                   </tr>
@@ -849,30 +864,6 @@
   </center>
 
   <form id="control-panel">
-    <!-- <fieldset class="form__publications">
-      <legend>Publication</legend>
-
-      <label>agendaNi
-        <input type="radio" name="publications" value="agenda_ni" checked >
-      </label>
-
-      <label>eolas Magazine
-        <input type="radio" name="publications" value="eolas_magazine">
-      </label>
-
-      <label>Energy Ireland Yearbook
-        <input type="radio" name="publications" value="energy_ireland_yearbook">
-      </label>
-
-      <label>Ireland’s Housing Magazine
-        <input type="radio" name="publications" value="irelands_housing_magazine">
-      </label>
-
-      <label>Renewable Energy Magazine
-        <input type="radio" name="publications" value="renewable_energy_magazine">
-      </label>
-    </fieldset> -->
-
     <fieldset class="form__colour">
       <label>Primary colour
         <input type="color" name="colourPrimary" value="#000306">
@@ -884,7 +875,17 @@
 
       <label>Primary text colour
         <input type="color" name="colourTextPrimary" value="#272a2d">
-      </label>      
+      </label>
+    </fieldset>
+
+    <fieldset class="form__map">
+      <legend>Map</legend>
+      <label>Latitude
+        <input type="text" name="mapLatitude" value="53.360712" maxlength="10">
+      </label>
+      <label>Longitude
+        <input type="text" name="mapLongitude" value="-6.2533976" maxlength="10">
+      </label>
     </fieldset>
 
     <fieldset class="form__images">
