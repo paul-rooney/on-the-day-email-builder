@@ -48,6 +48,15 @@ form {
     padding: 2px 4px;
   }
 
+  input[type="file"] {
+    margin: 0;
+    padding: 4px 4px 4px 0;
+  }
+
+  input[type="color"] {
+    margin-left: auto;
+  }
+
   select {
     margin-left: 0;
     min-width: max-content;
@@ -59,6 +68,15 @@ form {
   .form__reports input {
     margin-left: 0;
     order: -1;
+  }
+
+  .form__images label {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .form__colour label + label {
+    margin-top: .25rem;
   }
 
   .form__post-count label {

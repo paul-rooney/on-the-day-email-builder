@@ -332,7 +332,7 @@
 
                 <!-- HERO SECTION -->
                 <!-- <table width="640" height="240" cellpadding="0" cellspacing="0" border="0" class="wrapper [ hero ]" background="./assets/email-master-bg-640x320.jpg" style="background-image: url(./assets/email-master-bg-640x320.jpg);"> -->
-                <table width="640" height="240" cellpadding="0" cellspacing="0" border="0" class="wrapper [ hero ]" background="./assets/email-master-bg-640x320.jpg" style="background-image: url(https://picsum.photos/640/240);">
+                <table width="640" height="240" cellpadding="0" cellspacing="0" border="0" class="wrapper [ hero ]" background="./assets/email-master-bg-640x320.jpg" style="background-image: url('https://picsum.photos/640/240');">
                   <tr>
                     <td align="center">
                     <!--[if gte mso 9]>
@@ -553,7 +553,7 @@
                 <!-- END PROGRAMME SECTION -->
 
                 <!-- REGISTER SECTION -->
-                <table width="640" height="160" cellpadding="0" cellspacing="0" border="0" class="wrapper [ register ]" background="email-master-bg-640x320.jpg" style="background-image: url(./assets/email-master-bg-640x320.jpg);">
+                <table width="640" height="160" cellpadding="0" cellspacing="0" border="0" class="wrapper [ register ]" background="email-master-bg-640x320.jpg" style="background-image: url('./assets/email-master-bg-640x320.jpg');">
                   <tr>
                     <td align="center">
                     <!--[if gte mso 9]>
@@ -573,9 +573,9 @@
                       </tr>
                       <tr>
                         <td width="200" class="mobile" align="center" valign="middle">
-                          <!-- <h3 class="hashtag">
+                          <h3 class="hashtag">
                             <singleline label="Conference hashtag"><a href="" target="_blank" style="color: #002B54 !important; text-decoration: none;">#SMDublin</a></singleline>
-                          </h3> -->
+                          </h3>
 
                           <table width="198" height="44" cellpadding="0" cellspacing="0" border="0" class="[ button ]" bgcolor="" style="border-radius:4px;">
                             <tr>
@@ -849,7 +849,7 @@
   </center>
 
   <form id="control-panel">
-    <fieldset class="form__publications">
+    <!-- <fieldset class="form__publications">
       <legend>Publication</legend>
 
       <label>agendaNi
@@ -871,7 +871,7 @@
       <label>Renewable Energy Magazine
         <input type="radio" name="publications" value="renewable_energy_magazine">
       </label>
-    </fieldset>
+    </fieldset> -->
 
     <fieldset class="form__colour">
       <label>Primary colour
@@ -881,17 +881,15 @@
       <label>Secondary colour
         <input type="color" name="colourSecondary" value="#72bf44">
       </label>
+
+      <label>Primary text colour
+        <input type="color" name="colourTextPrimary" value="#272a2d">
+      </label>      
     </fieldset>
 
-    <fieldset>
+    <fieldset class="form__images">
       <label>Hero image
-        <input type="file" name="imageHero" accept="image/gif,image/jpeg,image/png,image,jpg" value="">
-      </label>
-    </fieldset>
-
-    <fieldset class="form__post-count">
-      <label>Number of posts (1&ndash;100)
-        <input type="number" name="postCount" value="25" min="1" max="100">
+        <input type="file" name="imageHero" accept=".gif, .jpg, .jpeg, .png" value="">
       </label>
     </fieldset>
 
@@ -903,13 +901,6 @@
           <path d="M20.49 9A9 9 0 0 0 5.64 5.64L1 10m22 4l-4.64 4.36A9 9 0 0 1 3.51 15"></path>
         </svg>
         Reset
-      </button>
-      <button type="button" name="apply">
-        <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-          <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
-          <polyline points="22 4 12 14.01 9 11.01"></polyline>
-        </svg>
-        Apply
       </button>
       <button type="button" name="download" disabled >
         <svg id="icon--loaded" xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
