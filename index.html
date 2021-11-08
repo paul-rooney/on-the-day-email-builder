@@ -1,5 +1,5 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
-<html lang="en">
+<html lang="en" style="--colour--primary: #000306; --colour--secondary: #72bf44; --colour--text1: #272a2d; --colour--white: #ffffff; --colour--grey01: #f1f1f1; --colour--grey02: #f2f2f2; --colour-link: #002b54;">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -10,227 +10,234 @@
 <link rel="stylesheet" href="./control-panel.css">
 
 <style type="text/css">
-  html {
-    --colour--primary: #000306;
-    --colour--secondary: #72bf44;
-
-    --colour--text1: #272a2d;
-
-    --colour--white: #ffffff;
-    --colour--grey01: #f1f1f1;
-    --colour--grey02: #f2f2f2;
+  /* CLIENT-SPECIFIC STYLES */
+  body,
+  table,
+  td,
+  a {
+    -webkit-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
+  }
+  table,
+  td {
+    mso-table-lspace: 0pt;
+    mso-table-rspace: 0pt;
+  }
+  img {
+    -ms-interpolation-mode: bicubic;
   }
 
-  /* CLIENT-SPECIFIC STYLES */
-  body, table, td, a { -webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; }
-  table, td { mso-table-lspace: 0pt; mso-table-rspace: 0pt; }
-  img { -ms-interpolation-mode: bicubic; }
-
   /* RESET STYLES */
-  img { border: 0; outline: none; text-decoration: none; }
-  table { border-collapse: collapse !important; }
-  body { overflow-x: hidden; margin: 0 !important; padding: 0 !important; width: 100% !important; }
-  body { color: var(--colour--text1); font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif; font-size: 14px; line-height: 1.5; }
+  img {
+    border: 0;
+    outline: none;
+    text-decoration: none;
+  }
+  table {
+    border-collapse: collapse !important;
+  }
+  body {
+    overflow-x: hidden;
+    margin: 0 !important;
+    padding: 0 !important;
+    width: 100% !important;
+  }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif;
+    font-size: 14px;
+    line-height: 1.5;
+  }
 
   /* iOS BLUE LINKS */
   a[x-apple-data-detectors] {
-  color: inherit !important;
-  text-decoration: none !important;
-  font-size: inherit !important;
-  font-family: inherit !important;
-  font-weight: inherit !important;
-  line-height: inherit !important;
+    color: inherit !important;
+    text-decoration: none !important;
+    font-size: inherit !important;
+    font-family: inherit !important;
+    font-weight: inherit !important;
+    line-height: inherit !important;
   }
 
   /* ANDROID CENTER FIX */
-  div[style*="margin: 16px 0;"] { margin: 0 !important; }
+  div[style*='margin: 16px 0;'] {
+    margin: 0 !important;
+  }
 
   /* CUSTOM STYLES */
   .wrapper.outer {
-  border-radius: 4px;
-  box-shadow: 0 28px 40px 2px rgba(0, 0, 0, .24),
-              0 11px 53px 1px rgba(0, 0, 0, .16);
-  z-index: 1;
-  position: relative;
+    border-radius: 4px;
+    box-shadow: 0 28px 40px 2px rgba(0, 0, 0, 0.24), 0 11px 53px 1px rgba(0, 0, 0, 0.16);
+    z-index: 1;
+    position: relative;
   }
 
   .header .heading {
-  font-size: 14px;
-  font-weight: bold;
-  letter-spacing: .25em;
-  /* padding-left: 20px; */
-  text-transform: uppercase;
+    font-size: 14px;
+    font-weight: bold;
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
   }
 
   .header .date {
-  border-top: 7px solid var(--colour--primary);
-  margin: 0;
-  padding-top: 14px;
+    border-style: solid;
+    border-width: 7px 0 0;
+    margin: 0;
+    padding-top: 14px;
   }
 
   .header .date span {
-  display: block !important;
-  font-weight: bold;
+    display: block !important;
+    font-weight: bold;
   }
 
   .header .date-day {
-  font-size: 40px;
-  line-height: 1;
+    font-size: 40px;
+    line-height: 1;
   }
 
   .header .date-month {
-  font-size: 24px;
-  line-height: 1;
-  text-transform: uppercase;
+    font-size: 24px;
+    line-height: 1;
+    text-transform: uppercase;
   }
 
   .header .date-year {
-  font-size: 24px;
-  line-height: 1;
+    font-size: 24px;
+    line-height: 1;
   }
 
-
-
   .hero .heading {
-  font-size: 40px;
-  letter-spacing: -.04em;
+    font-size: 40px;
+    letter-spacing: -0.04em;
   }
 
   .hero .subheading {
-  font-size: 28px;
-  letter-spacing: normal;
+    font-size: 28px;
+    letter-spacing: normal;
   }
-
-
 
   .main-info .heading {
-  letter-spacing: -.02em;
-  margin-top: 14px;
+    letter-spacing: -0.02em;
+    margin-top: 14px;
   }
 
-  .main-info .lead { font-weight: bold; }
-
-  .main-info .map {}
+  .main-info .lead {
+    font-weight: bold;
+  }
 
   .main-info .address {
-  margin-top: 21px;
-  margin-bottom: 30px;
+    margin-top: 21px;
+    margin-bottom: 30px;
   }
 
   .main-info .start-time,
-  .main-info .start-date { display: block; }
-
-  .main-info .start-time {}
-
-  .main-info .start-date {}
+  .main-info .start-date {
+    display: block;
+  }
 
   .main-info .button {
-  border: 1px solid var(--colour--secondary);
-  color: #ffffff;
-  font-weight: normal;
-  letter-spacing: .05em;
-  text-transform: uppercase;
-  transition: all 125ms ease-out;
+    border: 1px solid;
+    color: #ffffff;
+    font-weight: normal;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    transition: all 125ms ease-out;
   }
 
   .main-info .button:hover {
-  background-color: transparent !important;
-  border: 1px solid var(--colour--secondary) !important;
-  color: var(--colour--secondary) !important;
-  transition: all 125ms ease-out;
+    background-color: transparent !important;
+    border: 1px solid !important;
+    border-color: inherit !important;
+    color: inherit !important;
+    transition: all 125ms ease-out;
   }
-
-
 
   .thank-you .heading {
-  color: var(--colour--primary);
-  letter-spacing: -.02em;
+    letter-spacing: -0.02em;
   }
 
-
-
-  .programme {}
-
   .programme .heading {
-  letter-spacing: -.02em;
-  margin-top: 14px;
+    letter-spacing: -0.02em;
+    margin-top: 14px;
   }
 
   .programme .header-row {
-  background-color: var(--colour--text1);
-  color: var(--colour--white);
-  font-style: italic;
+    font-style: italic;
   }
 
-  .programme-time,
-  .programme-event {}
-
-  .programme-time { font-weight: bold; }
+  .programme-time {
+    font-weight: bold;
+  }
 
   .programme .more-info {
-  padding-top: 14px;
-  font-style: italic;
-  text-align: right;
+    padding-top: 14px;
+    font-style: italic;
+    text-align: right;
   }
-
-  .row-odd {
-    background-color: var(--colour--white);
-  }
-
-  .row-even {
-    background-color: var(--colour--grey01);
-  }
-
-
-
-  .register {}
 
   .register .heading {
-  letter-spacing: -.02em;
-  margin-top: 0;
+    letter-spacing: -0.02em;
+    margin-top: 0;
   }
 
   .register .button {
-  border: 1px solid var(--colour--text1);
-  color: var(--colour--text1);
-  font-weight: normal;
-  letter-spacing: .05em;
-  text-transform: uppercase;
-  transition: all 125ms ease-out;
+    border: 1px solid;
+    font-weight: normal;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    transition: all 125ms ease-out;
   }
 
-  .register .button:hover {
-  background-color: var(--colour--text1);
-  border: 1px solid var(--colour--text1);
-  color: var(--colour--white);
-  transition: all 125ms ease-out;
+  .subscription {
+    font-size: smaller;
   }
 
+  .newsletter {
+    color: inherit;
+    font-size: smaller;
+  }
 
-
-  .subscription { font-size: smaller; }
-
-  .newsletter { color: inherit; font-size: smaller; }
-
-  .newsletter .container ul { padding-left: 1rem; }
+  .newsletter .container ul {
+    padding-left: 1rem;
+  }
 
   /* MEDIA QUERIES */
-  @media all and (max-width:639px){
-  .wrapper{ width:320px!important; padding: 0 !important; }
-  .container{ width:280px!important;  padding: 0 !important; }
-  .mobile{ width:280px!important; display:block!important; padding: 0 !important; }
-  .img{ width:100% !important; height:auto !important; }
-  *[class="mobileOff"] { width: 0px !important; display: none !important; }
-  *[class*="mobileOn"] { display: block !important; max-height:none !important; }
+  @media all and (max-width: 639px) {
+    .wrapper {
+      width: 320px !important;
+      padding: 0 !important;
+    }
+    .container {
+      width: 280px !important;
+      padding: 0 !important;
+    }
+    .mobile {
+      width: 280px !important;
+      display: block !important;
+      padding: 0 !important;
+    }
+    .img {
+      width: 100% !important;
+      height: auto !important;
+    }
+    *[class='mobileOff'] {
+      width: 0px !important;
+      display: none !important;
+    }
+    *[class*='mobileOn'] {
+      display: block !important;
+      max-height: none !important;
+    }
 
-  .main-info .address,
-  .main-info .start-time,
-  .main-info .start-date { text-align: center; }
+    .main-info .address,
+    .main-info .start-time,
+    .main-info .start-date {
+      text-align: center;
+    }
   }
-
 </style>
 </head>
-<body style="margin:0; padding:0; background-color: var(--color--surface1);">
+<body style="margin: 0; padding: 0; background-color: var(--colour--white); color: var(--colour--text1);">
   <div style="position: relative;">
 
   <div style="position: absolute; top: 20%; height: 50%; width: 100%; transform: skew(20deg) rotate(20deg); background-color: #EDEEF0; z-index: 0;"></div>
@@ -252,7 +259,7 @@
                   <tr>
                     <td align="left" valign="top">
                       <small>
-                        If images aren’t loading correctly, <webversion>click here</webversion> to view this e-mail in your browser.
+                        If images aren’t loading, <webversion>click here</webversion> to view this e-mail in your browser.
                       </small>
                     </td>
                   </tr>
@@ -311,7 +318,7 @@
                           </td>
                           <td width="60" align="center" valign="top">&nbsp;</td>
                           <td width="100" align="center" valign="top">
-                            <p class="[ date ]">
+                            <p class="[ date ]" style="border-color: var(--colour--primary);">
                               <span class="[ date-day ]"><singleline label="Day: Two-digit format">27</singleline></span>
                               <span class="[ date-month ]"><singleline label="Month: Three-letter format">Feb</singleline></span>
                               <span class="[ date-year ]"><singleline label="Year: Four-digit format">2020</singleline></span>
@@ -417,7 +424,7 @@
                                   <tr>
                                     <td align="center" valign="top">
 
-                                      <table width="198" height="44" cellpadding="0" cellspacing="0" border="0" class="[ button ]" bgcolor="72bf44" style="background-color: var(--colour--secondary); border-radius: 4px;">
+                                      <table width="198" height="44" cellpadding="0" cellspacing="0" border="0" class="[ button ]" bgcolor="72bf44" style="background-color: var(--colour--secondary); border-color: var(--colour--secondary); border-radius: 4px;">
                                         <tr>
                                           <td align="center" valign="middle" height="44" style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif; font-size: 14px; font-weight: normal;">
                                             <singleline><a href="#" style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif; color: inherit; display: inline-block; text-decoration: none; line-height: 44px; width: 198px; font-weight: normal;">Getting there</a></singleline>
@@ -455,7 +462,6 @@
 
                             <!-- Visit: https://account.mapbox.com/ to access to get the API key if required -->
                             <!-- Visit: https://staticmapmaker.com/mapbox/ to design a new map, if required -->
-                            <!-- https://api.mapbox.com/styles/v1/mapbox/traffic-day-v2/static/pin-s-circle+000306(-6.2533976,53.360712)/-6.2533976,53.360712,14,0/350x233@2x?access_token=pk.eyJ1IjoiYm1mYnVzaW5lc3NzZXJ2aWNlcyIsImEiOiJjazVxenN2OWIwN2FjM29wMnB2bWdjemJ1In0.g39JtZJcvAQiBtu7_3rpTw&attribution=false&logo=false -->
                             <img id="map" editable width="350" src="https://api.mapbox.com/styles/v1/mapbox/traffic-day-v2/static/pin-s-circle+000306(-6.2533976,53.360712)/-6.2533976,53.360712,14,0,60/350x233@2x?access_token=pk.eyJ1IjoiYm1mYnVzaW5lc3NzZXJ2aWNlcyIsImEiOiJjazVxenN2OWIwN2FjM29wMnB2bWdjemJ1In0.g39JtZJcvAQiBtu7_3rpTw&attribution=false&logo=false" label="Map: 350✕233" style="margin: 30px 0 0; padding:0; border: none; display: block;" border="0" class="img [ map ]" alt="">
                           </td>
                         </tr>
@@ -485,7 +491,7 @@
                       <table width="580" cellpadding="0" cellspacing="0" border="0" class="container">
                         <tr>
                           <td align="center" valign="top">
-                            <multiline><h2 class="heading display-text highlight">Thank you for registering!</h2></multiline>
+                            <h2 class="heading display-text highlight" style="color: var(--colour--primary);"><singleline>Thank you for registering!</singleline></h2>
                           </td>
                         </tr>
                       </table>
@@ -520,18 +526,18 @@
                               <!-- REPEATER ALLOWS FOR DUPLICATION OF ODD OR EVEN ROW STYLES -->
                               <repeater>
                                 <layout label="Day (for two-day conferences)">
-                                  <tr class="header-row">
+                                  <tr class="header-row" style="background-color: var(--colour--text1); color: var(--colour--white);">
                                     <th align="left" valign="middle" colspan="2"><singleline label="Day # of #">Day 1</singleline></th>
                                   </tr>
                                 </layout>
                                 <layout label="Odd row">
-                                  <tr class="row-odd">
+                                  <tr class="row-odd" style="background-color: var(--colour--white);">
                                     <td class="programme-time" align="center" valign="middle"><singleline label="Time">08:30</singleline></td>
                                     <td class="programme-event"align="left" valign="middle"><singleline>Registration and morning coffee</singleline></td>
                                   </tr>
                                 </layout>
                                 <layout label="Even row">
-                                  <tr class="row-even">
+                                  <tr class="row-even" style="background-color: var(--colour--grey01);">
                                     <td class="programme-time" align="center" valign="middle"><singleline label="Time">09:00</singleline></td>
                                     <td class="programme-event"align="left" valign="middle"><singleline>Chairman’s welcome and introduction</singleline></td>
                                   </tr>
@@ -540,7 +546,7 @@
                             </table>
 
                             <multiline>
-                              <p class="more-info">To view the full programme including new speakers, <a href="" style="color: #002B54 !important; text-decoration: underline;">click here</a>.</p>
+                              <p class="more-info">To view the full programme including new speakers, <a href="" style="color: var(--colour--link) !important; text-decoration: underline;">click here</a>.</p>
                             </multiline>
 
                           </td>
@@ -581,10 +587,10 @@
                       <tr>
                         <td width="200" class="mobile" align="center" valign="middle">
                           <h3 class="hashtag">
-                            <singleline label="Conference hashtag"><a href="" target="_blank" style="color: #002B54 !important; text-decoration: none;">#SMDublin</a></singleline>
+                            <singleline label="Conference hashtag"><a href="" target="_blank" style="color: var(--colour--link) !important; text-decoration: none;">#SMDublin</a></singleline>
                           </h3>
 
-                          <table width="198" height="44" cellpadding="0" cellspacing="0" border="0" class="[ button ]" bgcolor="" style="border-radius:4px;">
+                          <table width="198" height="44" cellpadding="0" cellspacing="0" border="0" class="[ button ]" bgcolor="" style="border-color: var(--colour--text1); border-radius:4px; color: var(--colour--text1);">
                             <tr>
                               <td align="center" valign="middle" height="44" style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif; font-size:14px; font-weight:normal;">
                                 <singleline><a href="#" style="font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif;color:inherit;display:inline-block;text-decoration:none;line-height:44px;width:198px;font-weight:normal;">Final places</a></singleline>
@@ -611,11 +617,11 @@
                             </tr>
                             <tr>
                               <td><strong>E-mail:</strong></td>
-                              <td><singleline label="Conference e-mail"><a href="mailto:" target="_blank" style="color: #002B54 !important; text-decoration: underline;">info@eolasmagazine.ie</a></singleline></td>
+                              <td><singleline label="Conference e-mail"><a href="mailto:" target="_blank" style="color: var(--colour--link) !important; text-decoration: underline;">info@eolasmagazine.ie</a></singleline></td>
                             </tr>
                             <tr>
                               <td><strong>Online:</strong></td>
-                              <td><singleline label="Link to conference registration"><a href="" target="_blank" style="color: #002B54 !important; text-decoration: underline;">eolasmagazine.ie</a></singleline></td>
+                              <td><singleline label="Link to conference registration"><a href="" target="_blank" style="color: var(--colour--link) !important; text-decoration: underline;">eolasmagazine.ie</a></singleline></td>
                             </tr>
                           </table>
 
@@ -660,7 +666,7 @@
                               <td width="420" class="mobile" align="left" valign="middle">
                                 <multiline>
                                   <h3 class="heading">Are you an eolas Magazine subscriber?</h3>
-                                  <p>To receive updates on eolas Magazine publications and events, <a href="https://www.eolasmagazine.ie/subscription-confirmation/" target="_blank" style="color: #002B54 !important; text-decoration: underline;">sign up here</a>.</p>
+                                  <p>To receive updates on eolas Magazine publications and events, <a href="https://www.eolasmagazine.ie/subscription-confirmation/" target="_blank" style="color: var(--colour--link) !important; text-decoration: underline;">sign up here</a>.</p>
                                 </multiline>
                               </td>
                               <td width="60" class="mobile" align="center" valign="middle">&nbsp;</td>
@@ -690,7 +696,7 @@
                               <td width="420" class="mobile" align="left" valign="middle">
                                 <multiline>
                                   <h3 class="heading">Are you an agendaNi subscriber?</h3>
-                                  <p>To receive updates on agendaNi publications and events, <a href="https://www.agendani.com/subscription-confirmation/" target="_blank" style="color: #002B54 !important; text-decoration: underline;">sign up here</a>.</p>
+                                  <p>To receive updates on agendaNi publications and events, <a href="https://www.agendani.com/subscription-confirmation/" target="_blank" style="color: var(--colour--link) !important; text-decoration: underline;">sign up here</a>.</p>
                                 </multiline>
                               </td>
                               <td width="60" class="mobile" align="center" valign="middle">&nbsp;</td>
@@ -720,7 +726,7 @@
                               <td width="420" class="mobile" align="left" valign="middle">
                                 <multiline>
                                   <h3 class="heading">Are you an Energy Ireland subscriber?</h3>
-                                  <p>To receive updates on Energy Ireland publications and events, <a href="https://www.energyireland.ie/subscribe/" target="_blank" style="color: #002B54 !important; text-decoration: underline;">sign up here</a>.</p>
+                                  <p>To receive updates on Energy Ireland publications and events, <a href="https://www.energyireland.ie/subscribe/" target="_blank" style="color: var(--colour--link) !important; text-decoration: underline;">sign up here</a>.</p>
                                 </multiline>
                               </td>
                               <td width="60" class="mobile" align="center" valign="middle">&nbsp;</td>
@@ -865,6 +871,8 @@
 
   <form id="control-panel">
     <fieldset class="form__colour">
+      <legend>Colours</legend>
+
       <label>Primary colour
         <input type="color" name="colourPrimary" value="#000306">
       </label>
@@ -876,19 +884,40 @@
       <label>Primary text colour
         <input type="color" name="colourTextPrimary" value="#272a2d">
       </label>
+
+      <label>Link colour
+        <input type="color" name="colourLink" value="#002b54">
+      </label>
     </fieldset>
 
     <fieldset class="form__map">
       <legend>Map</legend>
-      <label>Latitude
-        <input type="text" name="mapLatitude" value="53.360712" maxlength="10">
+
+      <label>Venue
+        <input list="venues" name="mapVenue">
       </label>
+      <datalist id="venues" class="">
+        <option value="Croke Park">
+        <option value="Dunboyne Castle">
+        <option value="Gibson Hotel">
+        <option value="Radisson Blu Royal">
+        <option value="Europa Hotel">
+        <option value="Titanic Belfast">
+        <option value="Galgorm Spa and Golf Resort">
+        <option value="La Mon Hotel & Country Club">
+      </datalist>
+
+      <label>Latitude
+        <input type="number" name="mapLatitude" value="" min="-90" max="90" step=".01">
+      </label>
+
       <label>Longitude
-        <input type="text" name="mapLongitude" value="-6.2533976" maxlength="10">
+        <input type="number" name="mapLongitude" value="" min="-180" max="180" step=".01">
       </label>
     </fieldset>
 
     <fieldset class="form__images">
+      <legend>Images</legend>
       <label>Hero image
         <input type="file" name="imageHero" accept=".gif, .jpg, .jpeg, .png" value="">
       </label>
@@ -903,7 +932,7 @@
         </svg>
         Reset
       </button>
-      <button type="button" name="download" disabled >
+      <button type="button" name="download">
         <svg id="icon--loaded" xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
           <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
           <polyline points="7 10 12 15 17 10"></polyline>

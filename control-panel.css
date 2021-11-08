@@ -39,17 +39,22 @@ form {
     margin-right: .5rem;
   }
 
+  input[list],
   input[type="number"],
   input[type="text"] {
     margin-left: auto;
     text-align: right;
-
   }
 
+  input[list],
   input[type="number"],
   input[type="text"],
   select {
     padding: 2px 4px;
+  }
+
+  input[list] {
+    margin-bottom: .25rem;
   }
 
   input[type="file"] {
@@ -98,6 +103,10 @@ form {
     justify-content: flex-end;
     width: 100%;
     gap: .25rem;
+  }
+
+  .form__map input {
+    min-width: 20ch;
   }
 
   button {
