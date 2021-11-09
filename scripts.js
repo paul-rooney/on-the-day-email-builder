@@ -7,7 +7,7 @@ const download_button = form.download;
 const colour_primary = form.colourPrimary;
 const colour_secondary = form.colourSecondary;
 const colour_text_primary = form.colourTextPrimary;
-const colour_link = form.colourLink;
+const colour_text_secondary = form.colourTextSecondary;
 const image_hero = form.imageHero;
 const map_venue = form.mapVenue;
 const map_latitude = form.mapLatitude;
@@ -90,41 +90,41 @@ const selectVenue = (e) => {
   const venue = e.target.value;
 
   switch (venue) {
-    case 'Croke Park':
+    case 'croke_park':
       map_latitude.value = '53.360712';
       map_longitude.value = '-6.2533976';
       break;
-    case 'Dunboyne Castle':
+    case 'dunboyne_castle':
       map_latitude.value = '53.4172243';
       map_longitude.value = '-6.4797211';
       break;
-    case 'Europa Hotel':
+    case 'europa_hotel':
       map_latitude.value = '54.5948772';
       map_longitude.value = '-5.9373032';
       break;
-    case 'Galgorm Spa and Golf Resort':
+    case 'galgorm_spa':
       map_latitude.value = '54.8777373';
       map_longitude.value = '-6.3503547';
       break;
-    case 'Gibson Hotel':
+    case 'gibson_hotel':
       map_latitude.value = '53.3485617';
       map_longitude.value = '-6.2307056';
       break;
-    case 'La Mon Hotel & Country Club':
+    case 'la_mon_hotel':
       map_latitude.value = '54.5480531';
       map_longitude.value = '-5.8201026';
       break;
-    case 'Radisson Blu Royal':
+    case 'radisson_blu_royal':
       map_latitude.value = '53.3408795';
       map_longitude.value = '-6.2705112';
       break;
-    case 'Titanic Belfast':
+    case 'titanic_belfast':
     default:
       map_latitude.value = '54.6080972';
       map_longitude.value = '-5.9110183';
   }
 
-  updateMap()
+  updateMap();
 }
 
 
@@ -135,7 +135,7 @@ const selectVenue = (e) => {
 colour_primary.addEventListener('change', (e) => updateColour('--colour--primary', e));
 colour_secondary.addEventListener('change', (e) => updateColour('--colour--secondary', e));
 colour_text_primary.addEventListener('change', (e) => updateColour('--colour--text1', e));
-colour_link.addEventListener('change', (e) => updateColour('--colour--link', e));
+colour_text_secondary.addEventListener('change', (e) => updateColour('--colour--text2', e));
 
 
 
@@ -154,7 +154,20 @@ map_venue.addEventListener('change', (e) => selectVenue(e));
 
 
 
+download_button.addEventListener('click', () => {
+    document.querySelector('#script').remove();
+    document.querySelector('#control-panel').remove();
+    document.querySelector('link[href="./control-panel.css"]').remove();
 
+    const hidden_link = document.createElement('a');
+
+    hidden_link.href = `data:text/html;charset=UTF-8,${encodeURIComponent(document.documentElement.outerHTML)}`;
+    hidden_link.target = '_blank';
+    hidden_link.download = 'on-the-day.html';
+    hidden_link.click();
+  },
+  { once: true }
+);
 
   // returns everything with a CSS Custom property
   let x = document.querySelectorAll('[style*="var(--"]')
@@ -163,10 +176,10 @@ map_venue.addEventListener('change', (e) => selectVenue(e));
     '--colour--primary',
     '--colour--secondary',
     '--colour--text1',
+    '--colour--text2',
     '--colour--white',
     '--colour--grey01',
-    '--colour--grey02',
-    '--colour-link'
+    '--colour--grey02'
   ]
 
   let htmlStyles = propNames.map((propName, i) => {
@@ -180,7 +193,6 @@ map_venue.addEventListener('change', (e) => selectVenue(e));
 
 x.forEach(item => {
 
-
   if (item.style.backgroundColor.startsWith('var(--')) {
     console.log(item.nodeName + ' Background color: ' + item.style.backgroundColor);
 
@@ -188,9 +200,7 @@ x.forEach(item => {
       if (item.style.backgroundColor.includes(name)) {
         console.log(name);
 
-        htmlStyles.forEach(obj => {
-
-        })
+        htmlStyles.forEach(obj => {});
       }
     })
     // let bgcolour = getComputedStyle(document.documentElement).getPropertyValue('variable');
